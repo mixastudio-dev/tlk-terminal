@@ -339,28 +339,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const lines = document.querySelectorAll('.animated-title strong');
-  const texts = Array.from(lines).map(el => el.textContent.trim());
+  const lines = document.querySelectorAll('.animated-title > h1 > strong');
 
-  lines.forEach((line, index) => {
-    const text = texts[index];
-    line.innerHTML = '';
+  lines.forEach(line => {
+    const words = line.querySelectorAll(':scope > strong');
 
-    const container = document.createElement('span');
-    container.className = 'typing-line';
+    words.forEach(word => {
+      const text = word.textContent;
+      word.innerHTML = '';
 
-    text.split('').forEach(char => {
-      if (char === ' ') {
-        container.appendChild(document.createTextNode(' '));
-      } else {
+      const wordContainer = document.createElement('span');
+      wordContainer.className = 'word';
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+
         const span = document.createElement('span');
         span.className = 'char';
         span.textContent = char;
-        container.appendChild(span);
+        wordContainer.appendChild(span);
       }
-    });
 
-    line.appendChild(container);
+      word.appendChild(wordContainer);
+    });
   });
 
   async function startTyping() {
@@ -370,36 +371,31 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   async function typeLine(lineElement, isLastLine = false) {
-    const container = lineElement.querySelector('.typing-line');
-    const chars = container.querySelectorAll('.char');
-
+    const words = lineElement.querySelectorAll('.word');
+    const allChars = lineElement.querySelectorAll('.char');
     const cursor = document.createElement('span');
     cursor.className = 'cursor';
-    container.appendChild(cursor);
+    lineElement.appendChild(cursor);
 
-    container.insertBefore(cursor, container.firstChild);
+    lineElement.insertBefore(cursor, lineElement.firstChild);
 
-    for (let i = 0; i < chars.length; i++) {
-      const char = chars[i];
+    for (let i = 0; i < allChars.length; i++) {
+      const char = allChars[i];
 
-      await new Promise(resolve => setTimeout(resolve, 30));
+      await new Promise(resolve => setTimeout(resolve, 25));
 
       char.classList.add('visible');
 
       if (char.nextSibling) {
         char.parentNode.insertBefore(cursor, char.nextSibling);
       } else {
-        container.appendChild(cursor);
+        lineElement.appendChild(cursor);
       }
     }
 
     await new Promise(resolve => setTimeout(resolve, 200));
 
     if (isLastLine) {
-      cursor.style.opacity = '0';
-      cursor.style.animation = 'none';
-      cursor.style.width = '3px';
-      cursor.style.display = 'inline-block';
       cursor.classList.add('cursor-hidden');
     } else {
       cursor.remove();
