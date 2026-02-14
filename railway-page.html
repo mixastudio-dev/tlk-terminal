@@ -1,0 +1,254 @@
+<!--header.html-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./img/icons/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="./img/icons/favicon.ico">
+  <link rel="mask-icon" href="./img/icons/favicon.ico" color="#000000">
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <title></title>
+<script defer src="js/bundle.js"></script><script defer src="js/libs.js"></script><script defer src="js/style.js"></script><link href="css/style.min.css" rel="stylesheet"></head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="header-row">
+      <div class="header-col">
+        <div class="logo">
+          <img src="./img/logo.webp" alt="">
+        </div>
+      </div>
+      <div class="header-col">
+        <nav class="header-nav">
+          <div class="header-top">
+            <div class="logo logo-mobile">
+              <img src="./img/logo.webp" alt="">
+            </div>
+            <button class="close-menu-button"></button>
+          </div>
+          <div class="mobile-menu-wrapper">
+            <ul class="main-menu">
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Виды транспорта</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">ЖД перевозки</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-dark btn-phone btn-mobile">+7 924 002-82-88</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header-col">
+        <button class="mobile-menu-button">
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <a href="#" class="btn btn-dark btn-phone btn-pc">+7 924 002-82-88</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+
+
+
+<section class="railway-banner">
+  <div class="container">
+    <div class="banner-row">
+      <div class="banner-column">
+        <div class="banner-title animated-title">
+          <h1>
+            <strong>карта регулярных</strong>
+            <strong>маршрутов</strong>
+            <strong>ж/д превозок</strong>
+          </h1>
+        </div>
+        <div class="description">
+          <p>Санкт-Петербург Москва Минск Краснодар Ростов-на Дону Самара Новосибирск Иркутск Казань Екатеринбург
+            Красноярск Хабаровск Владивосток</p>
+        </div>
+      </div>
+      <div class="banner-column">
+        <div class="map-wrapper">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.435843%2C55.621816&mode=whatshere&whatshere%5Bpoint%5D=37.435843%2C55.621816&whatshere%5Bzoom%5D=17&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="delivery-types">
+  <div class="container">
+    <div class="decorated-h2">
+      <h2>виды перевозимых грузов</h2>
+    </div>
+    <div class="types-grid">
+      <div class="grid-item animate-block">Генеральный груз</div>
+      <div class="grid-item animate-block" data-delay="200">Опасный	груз</div>
+      <div class="grid-item animate-block" data-delay="400">Режимный груз</div>
+      <div class="grid-item animate-block" data-delay="600">Негабаритный груз</div>
+    </div>
+  </div>
+</section>
+
+<section id="callback-section" class="callback-section callback-section-w-contacts">
+  <div class="container">
+    <div class="callback-row">
+      <div class="callback-col">
+        <div class="decorated-h2">
+          <h2>вОПРОСЫ О морских контейнерных перевозках</h2>
+        </div>
+        <div class="contacts-block contacts-block-pc">
+          <div class="decorated-h2">
+            <div class="h2">КОНТАКТЫ</div>
+          </div>
+          <div class="contact-items">
+            <a href="#" class="contact-item contact-item-phone">+7 924 002-82-88</a>
+            <a href="#" class="contact-item contact-item-mail">tlcterminal@bk.ru</a>
+            <div class="contact-item contact-item-address">г. Москва ул. Московская 25</div>
+          </div>
+        </div>
+      </div>
+      <div class="callback-col">
+        <div class="form-wrapper">
+          <div class="form-header">
+            <div class="form-title">
+              Узнайте стоимость
+              <br>
+              перевозки вашего груза</div>
+          </div>
+          <div class="wpcf7 js" id="wpcf7-f35-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="35">
+  <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+  <form action="/dev/#wpcf7-f35-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+    <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="35"><input type="hidden" name="_wpcf7_version" value="6.1.2"><input type="hidden" name="_wpcf7_locale" value="ru_RU"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f35-o1"><input type="hidden" name="_wpcf7_container_post" value="0"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
+    </fieldset>
+    <p><span class="wpcf7-form-control-wrap" data-name="delivery"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Место отправки" value="" type="text" name="delivery"></span><br>
+      <span class="wpcf7-form-control-wrap" data-name="destination"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Место назначения" value="" type="text" name="destination"></span><br>
+      <span class="wpcf7-form-control-wrap" data-name="gabarites"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Габариты" value="" type="text" name="gabarites"></span><br>
+      <span class="wpcf7-form-control-wrap" data-name="weight"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Вес" value="" type="text" name="weight"></span><br>
+      <span class="wpcf7-form-control-wrap" data-name="tel-725"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон" value="" type="tel" name="tel-725"></span><br>
+      <span class="wpcf7-form-control-wrap" data-name="checkbox-257"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="checkbox-257[]" value="Cогласен(а) на обработку персональных данных
+определяемых в политике конфиденциальности"><span class="wpcf7-list-item-label">Cогласен(а) на обработку персональных данных
+определяемых в политике конфиденциальности</span></span></span></span>
+      <input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Отправить"><span class="wpcf7-spinner"></span><br>
+    </p>
+    <div class="wpcf7-response-output" aria-hidden="true"></div>
+  </form>
+</div>
+
+        </div>
+        <div class="contacts-block contacts-block-small-screens">
+          <div class="decorated-h2">
+            <div class="h2">КОНТАКТЫ</div>
+          </div>
+          <div class="contact-items">
+            <a href="#" class="contact-item contact-item-phone">+7 924 002-82-88</a>
+            <a href="#" class="contact-item contact-item-mail">tlcterminal@bk.ru</a>
+            <div class="contact-item contact-item-address">г. Москва ул. Московская 25</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer.html-->
+</main>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-column footer-column-pc">
+          <div class="logo logo-pc">
+            <img src="./img/logo.webp" alt="">
+          </div>
+          <div class="footer-copy">
+            <p>© ТЛК ТЕРМИНАЛ  2026</p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Политика конфеденциальности</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <nav class="footer-nav">
+            <div class="logo logo-small-screens">
+              <img src="./img/logo.webp" alt="">
+            </div>
+            <ul class="footer-menu">
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Виды транспорта</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">ЖД перевозки</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="small-screens-block">
+              <div class="footer-copy">
+                <p>© ТЛК ТЕРМИНАЛ  2026</p>
+              </div>
+              <div class="footer-links">
+                <a href="#">Политика конфеденциальности</a>
+              </div>
+            </div>
+          </nav>
+          <div class="footer-buttons">
+            <a href="#" class="btn btn-dark btn-phone">+7 924 002-82-88</a>
+            <a href="#" class="btn btn-dark btn-mail">tlcterminal@bk.ru</a>
+          </div>
+        </div>
+        <div class="footer-column-mobile">
+          <div class="footer-copy">
+            <p>© ТЛК ТЕРМИНАЛ  2026</p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Политика конфеденциальности</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal-dialog modal-thanks" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
+
