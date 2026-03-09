@@ -42,14 +42,22 @@
               <li>
                 <a href="#">Направления</a>
               </li>
-              <li>
+              <li class="menu-item-has-children">
                 <a href="#">Виды транспорта</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Морские контейнерные перевозки</a>
+                  </li>
+                  <li>
+                    <a href="#">ЖД перевозки</a>
+                  </li>
+                  <li>
+                    <a href="#">Автомобильные перевозки</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">О компании</a>
-              </li>
-              <li>
-                <a href="#">ЖД перевозки</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -75,7 +83,7 @@
 
 
 
-<section class="main-banner">
+<section class="main-banner" style="background-image: url(./img/banner-main-back.webp)">
   <div class="container">
     <div class="banner-title banner-title-pc animated-title">
       <h1>
@@ -109,23 +117,17 @@
       </div>
     </div>
     <div class="banner-wrapper">
-      <div class="banner-image banner-image-pc">
-        <img src="./img/main-banner-img.webp" alt="">
-      </div>
       <div class="banner-content">
         <div class="banner-row">
           <div class="description">
             <p>Мы предлагаем полный спектр логистических решений для вашего бизнеса</p>
           </div>
           <a href="#callback-section" class="btn btn-red">Узнать стоимость</a>
-          <div class="banner-image banner-image-small-screens">
-            <img src="./img/main-banner-img-mobile.webp" alt="">
-          </div>
         </div>
-        <div class="banner-stats block-stats-js">
+        <div class="banner-stats block-stats-js banner-stats-pc">
           <div class="stat-col">
             <div class="stat-item animate-block">
-              <div class="item-title" data-duration="1500">25 лет</div>
+              <div class="item-title" data-duration="1500">15 лет</div>
               <div class="item-description">
                 <p>в сфере международных <br> перевозок</p>
               </div>
@@ -152,6 +154,43 @@
                   в согласованные сроки</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section-mobile">
+  <div class="container">
+    <div class="banner-stats block-stats-js banner-stats-mobile">
+      <div class="stat-col">
+        <div class="stat-item animate-block">
+          <div class="item-title" data-duration="1500">15 лет</div>
+          <div class="item-description">
+            <p>в сфере международных <br> перевозок</p>
+          </div>
+        </div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-item animate-block" data-delay="200">
+          <div class="item-title" data-duration="1000">4 </div>
+          <div class="item-description">
+            <p>
+              собственных склада
+              <br>
+              в Китае</p>
+          </div>
+        </div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-item animate-block" data-delay="400">
+          <div class="item-title" data-duration="2000">98%</div>
+          <div class="item-description">
+            <p>
+              доставок точно
+              <br>
+              в согласованные сроки</p>
           </div>
         </div>
       </div>
@@ -216,12 +255,12 @@
       <h2>направления</h2>
     </div>
     <div class="directions-list">
-      <a href="#" class="direction-item">Контейнерные перевозки <br> из портов стран АТР</a>
-      <a href="#" class="direction-item">Мультимодальные решения с использованием <br> различных видов транспорта</a>
-      <a href="#" class="direction-item">Закупка и поставка <br> товаров из КНР</a>
-      <a href="#" class="direction-item">Перевозка <br> негабаритных грузов</a>
-      <a href="#" class="direction-item">Комплексное сопровождение грузов <br> на всех этапах доставки</a>
-      <a href="#" class="direction-item">Автоперевозки из КНР <br> и по РФ</a>
+      <div class="direction-item">Контейнерные перевозки <br> из портов стран АТР</div>
+      <div class="direction-item">Мультимодальные решения с использованием <br> различных видов транспорта</div>
+      <div class="direction-item">Закупка и поставка <br> товаров из КНР</div>
+      <div class="direction-item">Перевозка <br> негабаритных грузов</div>
+      <div class="direction-item">Комплексное сопровождение грузов <br> на всех этапах доставки</div>
+      <div class="direction-item">Автоперевозки из КНР <br> и по РФ</div>
     </div>
     <div class="direction-image">
       <img src="./img/diection-full-image.webp" alt="">
@@ -368,9 +407,6 @@
               </li>
               <li>
                 <a href="#">О компании</a>
-              </li>
-              <li>
-                <a href="#">ЖД перевозки</a>
               </li>
               <li>
                 <a href="#">Контакты</a>

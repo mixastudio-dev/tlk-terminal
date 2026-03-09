@@ -83,175 +83,141 @@
 
 
 
-<section class="railway-banner">
+<section class="image-banner banner-transport banner-transport-car">
+  <div class="banner-back">
+    <img class="banner-back-pc" src="./img/car-banner-back.webp" alt="">
+    <img class="banner-back-mobile" src="./img/car-banner-back-mobile.webp" alt="">
+  </div>
   <div class="container">
     <div class="banner-row">
       <div class="banner-column">
         <div class="banner-title animated-title">
           <h1>
             <strong>
-              <strong>карта</strong>
-              <strong>регулярных</strong>
-              <strong>маршрутов</strong>
+              <strong>Автомобильные</strong>
             </strong>
             <strong>
-              <strong>ж/д</strong>
-              <strong>перевозок</strong>
+              <strong>ПЕРЕВОЗКИ</strong>
             </strong>
           </h1>
         </div>
-      </div>
-     <div class="map-pc">
-       <div class="banner-map">
-         <img src="./img/maps-imgs/railway-map.webp" alt="Карта">
-       </div>
-       <div class="banner-tags">
-         <div class="tag animate-block" data-delay="2400" data-city="spb">
-           <span>Санкт-Петербург</span>
-         </div>
-         <div class="tag animate-block" data-delay="2200" data-city="krasnodar">
-           <span>Краснодар</span>
-         </div>
-         <div class="tag animate-block" data-delay="2000" data-city="novosibirsk">
-           <span>Новосибирск</span>
-         </div>
-         <div class="tag animate-block" data-delay="1800" data-city="ekb">
-           <span>Екатеринбург</span>
-         </div>
-         <div class="tag animate-block" data-delay="1600" data-city="vladivostok">
-           <span>Владивосток</span>
-         </div>
-         <div class="tag animate-block" data-delay="1400" data-city="habarowsk">
-           <span>Хабаровск</span>
-         </div>
-         <div class="tag animate-block" data-delay="1200" data-city="kazan">
-           <span>Казань</span>
-         </div>
-         <div class="tag animate-block" data-delay="1000" data-city="moscow">
-           <span>Москва</span>
-         </div>
-         <div class="tag animate-block" data-delay="800" data-city="rostov">
-           <span>Ростов-на-Дону</span>
-         </div>
-         <div class="tag animate-block" data-delay="600" data-city="irjutsk">
-           <span>Иркутск</span>
-         </div>
-         <div class="tag animate-block" data-delay="400" data-city="krasnoyarsk">
-           <span>Красноярск</span>
-         </div>
-         <div class="tag animate-block" data-delay="200" data-city="samara">
-           <span>Самара</span>
-         </div>
-         <div class="tag animate-block" data-city="minsk">
-           <span>Минск</span>
-         </div>
-       </div>
-     </div>
-      <div class="map-mobile">
-        <div class="banner-map">
-          <img src="./img/maps-imgs/railway-map.webp" alt="Карта">
-        </div>
-        <div class="banner-tags">
-          <div class="tag animate-block" data-delay="2400" data-city="spb">
-            <span>Санкт-Петербург</span>
+        <div class="banner-content">
+          <div class="banner-description">
+            <p>Маршрут, разрешения, спецтехника, сопровождение
+              <br>
+              и контроль на каждом этапе. Работаем
+              <br>
+              с юридическими лицами.</p>
           </div>
-          <div class="tag animate-block" data-delay="2200" data-city="irjutsk">
-            <span>Иркутск</span>
-          </div>
-          <div class="tag animate-block" data-delay="2000" data-city="krasnodar">
-            <span>Краснодар</span>
-          </div>
-          <div class="tag animate-block" data-delay="1800" data-city="samara">
-            <span>Самара</span>
-          </div>
-          <div class="tag animate-block" data-delay="1600" data-city="novosibirsk">
-            <span>Новосибирск</span>
-          </div>
-          <div class="tag animate-block" data-delay="1400" data-city="moscow">
-            <span>Москва</span>
-          </div>
-          <div class="tag animate-block" data-delay="1200" data-city="ekb">
-            <span>Екатеринбург</span>
-          </div>
-          <div class="tag animate-block" data-delay="1000" data-city="minsk">
-            <span>Минск</span>
-          </div>
-          <div class="tag animate-block" data-delay="800" data-city="krasnoyarsk">
-            <span>Красноярск</span>
-          </div>
-          <div class="tag animate-block" data-delay="600" data-city="kazan">
-            <span>Казань</span>
-          </div>
-          <div class="tag animate-block" data-delay="400" data-city="vladivostok">
-            <span>Владивосток</span>
-          </div>
-          <div class="tag animate-block" data-delay="200" data-city="rostov">
-            <span>Ростов-на-Дону</span>
-          </div>
-          <div class="tag animate-block" data-city="habarowsk">
-            <span>Хабаровск</span>
-          </div>
+          <a href="#callback-section" class="btn btn-red">Узнать стоимость</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mapBlocks = document.querySelectorAll('.banner-map, .banner-tags');
-    const blocks = [];
-    for (let i = 0; i < mapBlocks.length; i += 2) {
-      if (i + 1 < mapBlocks.length) {
-        blocks.push({
-          mapContainer: mapBlocks[i],
-          tagsContainer: mapBlocks[i + 1]
-        });
-      }
-    }
-
-    blocks.forEach(block => {
-      const mapImage = block.mapContainer.querySelector('img');
-      const tags = block.tagsContainer.querySelectorAll('.tag');
-
-      if (!mapImage || tags.length === 0) return;
-
-      const originalImageSrc = mapImage.src;
-
-      tags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-          const city = this.dataset.city;
-          if (city) {
-            mapImage.src = `./img/maps-imgs/city-${city}.png`;
-
-            tags.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-          }
-        });
-
-        tag.addEventListener('mouseleave', function() {
-          mapImage.src = originalImageSrc;
-
-          tags.forEach(t => t.classList.remove('active'));
-        });
-      });
-    });
-  });
-</script>
-
-<section class="delivery-types">
+<section class="advantages-section advantages-section-transport-car">
   <div class="container">
-    <div class="decorated-h2">
-      <h2>виды перевозимых грузов</h2>
-    </div>
-    <div class="types-grid">
-      <div class="grid-item animate-block">Генеральный груз</div>
-      <div class="grid-item animate-block" data-delay="200">Опасный	груз</div>
-      <div class="grid-item animate-block" data-delay="400">Режимный груз</div>
-      <div class="grid-item animate-block" data-delay="600">Негабаритный груз</div>
+    <div class="advantages-row">
+      <div class="advantages-col">
+        <div class="decorated-h2">
+          <h2>Преимущества автомобильных грузоперевозок</h2>
+        </div>
+        <div class="description description-pc">
+          <p>Такой комплексный подход к организации перевозок делает автомобильный транспорт оптимальным выбором для решения широкого спектра логистических задач</p>
+        </div>
+      </div>
+      <div class="advantages-col">
+        <div class="advantages-wrapper">
+          <div class="advantage-item">
+            <div class="item-title">Оперативность доставки</div>
+            <div class="item-description">
+              <p>Обеспечивается благодаря гибкости транспортной системы и возможности оперативного реагирования на запросы клиентов</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="item-title">Географическая доступность</div>
+            <div class="item-description">
+              <p>Позволяет осуществлять доставку в самые отдалённые и труднодоступные населённые пункты, где другие виды транспорта бессильны</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="item-title">Упрощённая логистика</div>
+            <div class="item-description">
+              <p>Исключает необходимость сложного планирования маршрутов и длительных согласований, характерных для железнодорожного и авиационного транспорта</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="item-title">Гибкость маршрутов</div>
+            <div class="item-description">
+              <p>Даёт возможность корректировать путь следования
+                в процессе перевозки с учётом дорожной ситуации
+                и пожеланий заказчика</p>
+            </div>
+          </div>
+
+          <div class="advantage-item">
+            <div class="item-title">Экономическая эффективность</div>
+            <div class="item-description">
+              <p>Достигается за счёт отсутствия необходимости дополнительных затрат на перегрузку и перевалку грузов при смене вида транспорта</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="description description-mobile">
+          <p>Такой комплексный подход к организации перевозок делает автомобильный транспорт оптимальным выбором для решения широкого спектра логистических задач</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<section class="delivery-car-tags">
+  <div class="container">
+    <div class="tags-wrapper">
+      <div class="tag">
+        <span>Прямая логистика из Китая в РФ</span>
+      </div>
+      <div class="tag">
+        <span>Помощь в оформлении документации</span>
+      </div>
+      <div class="tag">
+        <span>Оперативность логистов</span>
+      </div>
+      <div class="tag">
+        <span>Возможность осуществления перевозки опасных грузов от 1-9 класса</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="delivery-section delivery-section-car">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-m-12">
+        <div class="decorated-h2">
+          <h2>Полный спектр Логистических Услуг</h2>
+        </div>
+        <div class="delivery-points">
+          <div class="point animate-block">Автодоставка крупнотоннажных контейнеров</div>
+          <div class="point animate-block" data-delay="200">Доставка груза от двери до двери</div>
+          <div class="point animate-block" data-delay="400">Раскредитация и представление интересов клиентов на морских и ж/д терминалах</div>
+          <div class="point animate-block" data-delay="600">Экспедиторские услуги</div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-m-12">
+        <div class="image-wrapper">
+          <img src="./img/main-banner-img.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="callback-section" class="callback-section callback-section-w-contacts">
   <div class="container">
